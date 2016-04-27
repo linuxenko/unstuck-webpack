@@ -1,2 +1,3 @@
-import "./src/css/index.sass"
-import "./src/index.js"
+import "./css/vendor.sass"
+import "./css/application.sass"
+import "./js/index.js"

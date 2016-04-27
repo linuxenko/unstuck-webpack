@@ -10,7 +10,7 @@ var dir_build = path.resolve(__dirname, 'dist');
 module.exports = {
     entry: {
       app : path.resolve(dir_js, '../index.js'),
-      vendor : ['react', 'react-dom']
+      vendor : ['react', 'react-dom', './css/vendor.sass']
     },
     output: {
         path: dir_build,
@@ -55,7 +55,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].css"),
+        new ExtractTextPlugin("[name].css", {  allChunks: true }),
         new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"),
         new webpack.NoErrorsPlugin()
     ],
