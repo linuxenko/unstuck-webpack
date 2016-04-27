@@ -1,3 +1,6 @@
-import "./css/vendor.sass"
-import "./css/application.sass"
-import "./js/index.js"
+import './index.html'
+import './css/vendor.sass'
+import './css/application.sass'
+import 'jquery'
+import 'materialize-css/dist/js/materialize.js'
+import './js/index.jsx'

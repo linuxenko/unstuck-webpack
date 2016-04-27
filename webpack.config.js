@@ -10,7 +10,7 @@ var dir_build = path.resolve(__dirname, 'dist');
 module.exports = {
     entry: {
       app : path.resolve(dir_js, '../index.js'),
-      vendor : ['react', 'react-dom', './css/vendor.sass']
+      vendor : ['jquery', 'materialize-css/dist/js/materialize.js', 'react', 'react-dom', 'react-materialize', './css/vendor.sass']
     },
     output: {
         path: dir_build,
@@ -48,15 +48,14 @@ module.exports = {
         ],
         preLoaders: [
             {
-              test: /\.js$/,
-              loaders: ['eslint'],
-              include: [path.resolve(dir_js)]
+              test: /\.js($|\?)|\.jsx($|\?)/,
+              loaders: ['eslint']
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin("[name].css", {  allChunks: true }),
-        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.js"),
+        new webpack.optimize.CommonsChunkPlugin("vendor", "[name].js"),
         new webpack.NoErrorsPlugin()
     ],
     stats: {
