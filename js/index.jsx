@@ -1,17 +1,19 @@
 import React from 'react'
-import ReactDom from 'react-dom'
-import {Button, Icon} from 'react-materialize'
+import ReactDOM from 'react-dom'
+import {Provider} from 'react-redux'
+import { Router, Route, browserHistory } from 'react-router'
+
+import store from 'reducer/index'
+
+import Application from 'component/Application.jsx'
 
 
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={Application}>
 
-class Application extends React.Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
-}
-
-ReactDom.render(<Application />, document.getElementById('application'))
+      </Route>
+    </Router>
+  </Provider>
+,document.getElementById('application'))

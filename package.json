@@ -39,12 +39,13 @@
     "react-dom": "^15.0.1",
     "react-materialize": "^0.14.3",
     "react-redux": "^4.4.5",
+    "react-router": "^2.3.0",
     "redux": "^3.4.0",
-    "redux-logger": "^2.6.1",
     "resolve-url": "^0.2.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "velocity-animate": "^1.2.3",
     "webpack": "^1.12.15"
   }
 }

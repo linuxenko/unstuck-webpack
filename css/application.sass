@@ -1,3 +1,19 @@
+$appHeight : 480px
 
-body
-  font-family: Roboto
+html,body
+    height: 100%
+
+.application
+  height: 100%
+
+.uw_application
+  display: flex
+  height: 100%
+
+  &--container
+    margin: auto
+    height: $appHeight
+    box-shadow: 0px 2px 5px #444
+    background-color: #fff
+
+@import './side.sass'

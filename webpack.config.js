@@ -4,13 +4,15 @@ var path = require('path');
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var dir_js = path.resolve(__dirname, 'src');
+var dir_js = path.resolve(__dirname, 'js');
 var dir_build = path.resolve(__dirname, 'dist');
 
 module.exports = {
     entry: {
       app : path.resolve(dir_js, '../index.js'),
-      vendor : ['jquery', 'materialize-css/dist/js/materialize.js', 'react', 'react-dom', 'react-materialize', './css/vendor.sass']
+      vendor : ['jquery',  'materialize-css/dist/js/materialize.js',
+        'react', 'react-dom', 'react-router', 'react-redux', 'redux', 'react-materialize',
+         './css/vendor.sass' ]
     },
     output: {
         path: dir_build,
