@@ -1,5 +1,5 @@
 dist
-lib
+lib/react-materialize
 # Logs
 logs
 *.log

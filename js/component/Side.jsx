@@ -1,21 +1,22 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {hashHistory} from 'react-router'
 import {Collection, CollectionItem, Input, Row, Col} from 'react-materialize'
 
 import Actions from 'reducer/actions'
 
 class Side extends Component {
 
-  switchChange(type) {
+  switchChange(type,e) {
     switch(type) {
     case 'html':
-      this.props.dispatch(Actions.TOGGLE_HTML())
+      this.props.dispatch(Actions.TOGGLE_HTML(e.target.checked))
       break
     case 'js':
-      this.props.dispatch(Actions.TOGGLE_JS())
+      this.props.dispatch(Actions.TOGGLE_JS(e.target.checked))
       break
     case 'css':
-      this.props.dispatch(Actions.TOGGLE_CSS())
+      this.props.dispatch(Actions.TOGGLE_CSS(e.target.checked))
       break
     }
   }
@@ -27,20 +28,28 @@ class Side extends Component {
       css  : this.props.state.css.enabled
     }
 
+    let activeItem = this.props.route.replace(/^\//,'')
+
+    if (enabledItems.hasOwnProperty(activeItem) && enabledItems[activeItem] === false) {
+      setTimeout( () => hashHistory.push('/'), 1)
+    }
+
     return (
       <div  className="uw_application--side">
         <div className="logo">Unstuck Webpack</div>
         <Collection>
-          <CollectionItem href={enabledItems.html ? '#html' : '#'}>
+          <CollectionItem active={activeItem === 'html'}>
            <div className={enabledItems.html === true ? 'enabled' : 'disabled'}>
              <div className="control">
               <Row>
-                <Col s={12}>
-                  <i className="devicons devicons-html5"></i>
-                  <span> HTML </span>
+                <Col s={12}  >
+                  <a href={enabledItems.html ? '#/html' : null} >
+                    <i className="devicons devicons-html5"></i>
+                    <span> HTML </span>
+                  </a>
                   <div className="right">
                     <Input name='html' onChange={this.switchChange.bind(this, 'html')}
-                     type='switch' />
+                     type='switch'/>
                   </div>
                 </Col>
               </Row>
@@ -50,13 +59,15 @@ class Side extends Component {
              </div>
            </div>
           </CollectionItem>
-          <CollectionItem href={enabledItems.js ? '#js' : '#'}>
+          <CollectionItem active={activeItem === 'js'}>
           <div className={enabledItems.js === true ? 'enabled' : 'disabled'}>
             <div className="control">
              <Row>
                <Col s={12}>
-                 <i className="devicons devicons-javascript"></i>
-                 <span> Build </span>
+                 <a href={enabledItems.js ? '#/js' : null}>
+                   <i className="devicons devicons-javascript"></i>
+                   <span> Build </span>
+                 </a>
                  <div className="right">
                    <Input name='js' type='switch' onChange={this.switchChange.bind(this, 'js')} />
                  </div>
@@ -64,17 +75,19 @@ class Side extends Component {
              </Row>
             </div>
             <div className="description">
-              Transpiller settings and dependencies configuration.
+              Javascript builders configuration.
             </div>
            </div>
           </CollectionItem>
-          <CollectionItem href={enabledItems.css ? '#css' : '#'}>
+          <CollectionItem active={activeItem === 'css'}>
            <div className={enabledItems.css === true ? 'enabled' : 'disabled'}>
             <div className="control">
              <Row>
                <Col s={12}>
-                 <i className="devicons devicons-css3_full"></i>
-                 <span> CSS </span>
+                 <a href={enabledItems.css ? '#/css' : null}>
+                   <i className="devicons devicons-css3_full"></i>
+                   <span> CSS </span>
+                 </a>
                  <div className="right">
                    <Input name='css' type='switch' onChange={this.switchChange.bind(this, 'css')} />
                  </div>

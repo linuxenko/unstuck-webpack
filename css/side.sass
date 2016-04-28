@@ -1,3 +1,6 @@
+$sideBg : #fff
+$activeColor: #00796b
+
 .uw_application
   &--container
     & > .row
@@ -11,48 +14,44 @@
 
   &--side
     height: 100%
-    background: radial-gradient(#673ab7, lighten(#673ab7, 5%))
+    background: darken($sideBg, 5%) !important
     .logo
+      text-align: center
+      color : $activeColor
+      font-size: 32px
       font-weight: bold
-      background-size: contain
-      font-size: 18px
-      text-align: right
-      color : #fff
-      padding: 10px
-      background: darken(#673ab7, 5%)
+      padding: 20px
     .collection
       border: none
       padding: 0px
       margin: 0px
-    a.collection-item:hover
-      background: none !important
-    a.collection-item
+    li.collection-item
       border: none
-      background: transparent
+      background: darken($sideBg, 5%) !important
       padding: 0px
+      cursor: default
       & > div
         padding: 20px
       .control
-        color: #828282
+        a
+          color: #828282
         border-bottom: 1px solid #888
         span
-          font-size: 16px
+          font-size: 22px
 
         i
           font-size: 22px
-          float: left
           margin-right: 5px
       .description
         padding-top: 5px
-        color: #ddd
+        color: #444
       .enabled
-        opacity: 1
-        cursor: pointer
-        background: darken(#673ab7, 5%) !important
+        background: darken($sideBg, 5%) !important
         .control
-          font-weight: bold
-          color: #a7ffeb
+          a
+            font-weight: bold
+            color: $activeColor
+            padding-bottom: 2px
+            &:hover
+              border-bottom: 1px dotted #00695c
         .description
-        &:hover
-          .control
-            text-decoration: underline

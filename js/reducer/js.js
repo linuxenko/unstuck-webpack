@@ -6,7 +6,7 @@ const initialState = {
 export default function(state = initialState, action) {
 
   if (action.type === 'TOGGLE_JS') {
-    state.enabled = !state.enabled
+    state.enabled = action.payload.checked
 
     return Object.assign({}, state)
   }
