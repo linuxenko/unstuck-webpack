@@ -1,0 +1,3 @@
+[submodule "lib/react-materialize"]
+	path = lib/react-materialize
+	url = https://github.com/15lyfromsaturn/react-materialize.git

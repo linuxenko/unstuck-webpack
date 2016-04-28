@@ -12,8 +12,47 @@
   &--side
     height: 100%
     background: radial-gradient(#673ab7, lighten(#673ab7, 5%))
-    padding: 10px
     .logo
+      font-weight: bold
+      background-size: contain
       font-size: 18px
       text-align: right
       color : #fff
+      padding: 10px
+      background: darken(#673ab7, 5%)
+    .collection
+      border: none
+      padding: 0px
+      margin: 0px
+    a.collection-item:hover
+      background: none !important
+    a.collection-item
+      border: none
+      background: transparent
+      padding: 0px
+      & > div
+        padding: 20px
+      .control
+        color: #828282
+        border-bottom: 1px solid #888
+        span
+          font-size: 16px
+
+        i
+          font-size: 22px
+          float: left
+          margin-right: 5px
+      .description
+        padding-top: 5px
+        color: #ddd
+      .enabled
+        opacity: 1
+        cursor: pointer
+        background: darken(#673ab7, 5%) !important
+        .control
+          font-weight: bold
+          color: #a7ffeb
+        .description
+        &:hover
+          .control
+            text-decoration: underline

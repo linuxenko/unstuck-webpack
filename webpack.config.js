@@ -19,7 +19,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-       modulesDirectories: ['node_modules', dir_js],
+       modulesDirectories: ['node_modules', 'lib', dir_js],
     },
     devServer: {
         contentBase: dir_build,
@@ -51,7 +51,8 @@ module.exports = {
         preLoaders: [
             {
               test: /\.js($|\?)|\.jsx($|\?)/,
-              loaders: ['eslint']
+              loaders: ['eslint'],
+              exclude : [/react-materialize/,/node_modules/]
             }
         ]
     },

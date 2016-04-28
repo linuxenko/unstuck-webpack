@@ -37,7 +37,6 @@
     "precss": "^1.4.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-materialize": "^0.14.3",
     "react-redux": "^4.4.5",
     "react-router": "^2.3.0",
     "redux": "^3.4.0",

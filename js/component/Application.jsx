@@ -11,8 +11,8 @@ class Application extends Component {
       <div className="uw_application">
         <div className="uw_application--container container">
           <Row>
-            <Col m={4} s={12}><Side /></Col>
-            <Col m={8} s={12}>
+            <Col m={5} s={12}><Side /></Col>
+            <Col m={7} s={12}>
                 <Tabs className='tab-demo z-depth-1'>
                   <Tab title="Test 1">Test 1</Tab>
                   <Tab title="Test 2" active>Test 2</Tab>
