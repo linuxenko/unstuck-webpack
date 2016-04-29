@@ -49,7 +49,7 @@ class FrameworksContainer extends Component {
                 </Col>
              </Row>
            </Tab>
-           <Tab title="CSS Fonts">
+           <Tab title="Font Icons">
              <Row className="tab-content">
               <Col s={12} className="mb-10">
                <Input name='fontawesome-fw' type='checkbox' label="Font Awesome" />

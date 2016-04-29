@@ -31,6 +31,7 @@ html,body
       text-align: right
       padding-bottom: 10px
       color: $titleColor
+
     .tab-content
       margin-top: 30px
 
@@ -57,6 +58,33 @@ ul.tabs
 [type="checkbox"]:checked + label:before
   border-right-color: $activeColor
   border-bottom-color: $activeColor
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea
+  border-bottom-color: $activeColor
+
+.input-field input[type=text]:focus
+  border-bottom: 1px solid $activeColor
+  box-shadow: 0 1px 0 0 $activeColor
+
+.input-field input[type=text]:focus + label
+  color: $activeColor
+
+.select-wrapper
+  .caret
+    color: $activeColor !important
+  input.select-dropdown
+    border-bottom-color: $activeColor
+
+.dropdown-content li > a, .dropdown-content li
+  background-color: $sideActiveColor
+  & > span
+    color: $sideBg
+
+.dropdown-content li:hover
+  background-color: $sideBg
+  span
+    color: $sideActiveColor
+
 
 .mb-10
   margin-bottom: 10px

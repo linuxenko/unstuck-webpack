@@ -25,8 +25,7 @@ class HtmlContainer extends Component {
     return (
       <div className="uw_application--html">
         <div className="uw_application--subcontainer">
-          <div className="page-title">HTML Configuration</div>
-
+          <div className="page-title mb-10">HTML Configuration</div>
           <Row>
            <Col s={12} className="mb-10">
             <Input name='html-template' type='checkbox'
