@@ -1,5 +1,3 @@
-$sideBg : #fff
-$activeColor: #00796b
 
 .uw_application
   &--container
@@ -14,21 +12,21 @@ $activeColor: #00796b
 
   &--side
     height: 100%
-    background: $sideBg !important
+    background: radial-gradient($sideBg, darken($sideBg, 5%)) !important
     box-shadow: 0px 1px 1px #444
     .logo
-      text-align: center
-      color : $activeColor
-      font-size: 32px
+      text-align: left
+      color : $sideActiveColor
+      font-size: 22px
       font-weight: bold
-      padding: 20px
+      padding: 20px 0px 30px 20px
     .collection
       border: none
       padding: 0px
       margin: 0px
     li.collection-item
       border: none
-      background: $sideBg !important
+      background: transparent !important
       padding: 0px
       cursor: default
       & > div
@@ -37,7 +35,7 @@ $activeColor: #00796b
         a
           cursor: default
           padding: 2px 5px
-          color: #828282
+          color: darken($sideActiveColor, 50%)
         border-bottom: 1px solid #888
         span
           font-size: 22px
@@ -47,23 +45,17 @@ $activeColor: #00796b
           margin-right: 5px
       .description
         padding-top: 5px
-        color: #444
+        color: darken($sideActiveColor, 50%)
       .enabled
         .control
           a
             cursor: pointer
             font-weight: bold
-            color: $activeColor
-            background: linear-gradient($activeColor, darken($activeColor,3%)) bottom no-repeat
-            background-size: 100% 0px
-            transition: background-size .1s, color .15s
-            border-bottom: 1px dashed $activeColor
-            &:hover
-              //background: #00695c
-              color: #fff
-              background-size: 100% 100%
-              transition: background-size .1s, color .15s
+            color: $sideActiveColor
 
         .description
+          color: darken($sideActiveColor, 5%)
     li.collection-item.active
-      background: darken(#fff, 2%) !important
+      background: darken($sideBg, 10%) !important
+      .control
+        border-bottom: 1px dashed $sideActiveColor

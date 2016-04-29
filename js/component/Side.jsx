@@ -51,7 +51,7 @@ class Side extends Component {
               </Row>
              </div>
              <div className="description">
-               Make project support different predefined sets
+               Enable support predefined sets
              </div>
            </div>
           </CollectionItem>
