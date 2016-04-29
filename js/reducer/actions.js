@@ -20,6 +20,20 @@ export default class Actions {
     }
   }
 
+  static FW_ADD_FRAMEWORK(fw = null) {
+    return {
+      type : 'FW_ADD_FRAMEWORK',
+      payload : {fw}
+    }
+  }
+
+  static FW_REMOVE_FRAMEWORK(fw = null) {
+    return {
+      type : 'FW_REMOVE_FRAMEWORK',
+      payload : {fw}
+    }
+  }
+
   static TOGGLE_JS(checked = false) {
     return {
       type : 'TOGGLE_JS',

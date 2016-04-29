@@ -38,6 +38,23 @@ class Side extends Component {
       <div  className="uw_application--side">
         <div className="logo">Unstuck Webpack</div>
         <Collection>
+          <CollectionItem active={activeItem === ''}>
+           <div className="enabled">
+             <div className="control">
+              <Row>
+                <Col s={12}  >
+                  <a href="#/">
+                    <i className="devicons devicons-dropbox"></i>
+                    <span> Dashboard </span>
+                  </a>
+                </Col>
+              </Row>
+             </div>
+             <div className="description">
+              General webpack configuration options
+             </div>
+           </div>
+          </CollectionItem>
           <CollectionItem active={activeItem === 'fw'}>
            <div className="enabled">
              <div className="control">
@@ -51,7 +68,7 @@ class Side extends Component {
               </Row>
              </div>
              <div className="description">
-               Enable support predefined sets
+               Include support of predefined sets
              </div>
            </div>
           </CollectionItem>

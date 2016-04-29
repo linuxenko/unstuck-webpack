@@ -1,5 +1,5 @@
 const initialState = {
-  enabled : false
+  enabled : true
 }
 
 

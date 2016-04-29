@@ -3,7 +3,11 @@ import React, {Component} from 'react'
 class CssContainer extends Component {
   render() {
     return (
-      <h2>CssContainer</h2>
+      <div className="uw_application--fw">
+        <div className="uw_application--subcontainer">
+          <div className="page-title">CSS Configuration</div>
+        </div>
+      </div>
     )
   }
 }
