@@ -49,7 +49,7 @@ class Side extends Component {
                   </a>
                   <div className="right">
                     <Input name='html' onChange={this.switchChange.bind(this, 'html')}
-                     type='switch'/>
+                     type='switch' defaultChecked={enabledItems.html}/>
                   </div>
                 </Col>
               </Row>
@@ -69,7 +69,8 @@ class Side extends Component {
                    <span> Build </span>
                  </a>
                  <div className="right">
-                   <Input name='js' type='switch' onChange={this.switchChange.bind(this, 'js')} />
+                   <Input name='js' type='switch' onChange={this.switchChange.bind(this, 'js')}
+                   defaultChecked={enabledItems.js} />
                  </div>
                </Col>
              </Row>
@@ -89,7 +90,8 @@ class Side extends Component {
                    <span> CSS </span>
                  </a>
                  <div className="right">
-                   <Input name='css' type='switch' onChange={this.switchChange.bind(this, 'css')} />
+                   <Input name='css' type='switch' onChange={this.switchChange.bind(this, 'css')}
+                   defaultChecked={enabledItems.css}/>
                  </div>
                </Col>
              </Row>
