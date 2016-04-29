@@ -38,6 +38,23 @@ class Side extends Component {
       <div  className="uw_application--side">
         <div className="logo">Unstuck Webpack</div>
         <Collection>
+          <CollectionItem active={activeItem === 'fw'}>
+           <div className="enabled">
+             <div className="control">
+              <Row>
+                <Col s={12}  >
+                  <a href="#/fw" className="waves-effect waves-light" >
+                    <i className="devicons devicons-npm"></i>
+                    <span> Presets </span>
+                  </a>
+                </Col>
+              </Row>
+             </div>
+             <div className="description">
+               Make project support different predefined sets
+             </div>
+           </div>
+          </CollectionItem>
           <CollectionItem active={activeItem === 'html'}>
            <div className={enabledItems.html === true ? 'enabled' : 'disabled'}>
              <div className="control">

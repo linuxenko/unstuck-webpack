@@ -11,6 +11,7 @@ import IndexContainer from 'component/IndexContainer.jsx'
 import HtmlContainer from 'component/HtmlContainer.jsx'
 import JsContainer from 'component/JsContainer.jsx'
 import CssContainer from 'component/CssContainer.jsx'
+import FrameworksContainer from 'component/FrameworksContainer.jsx'
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Application}>
         <IndexRoute component={IndexContainer} />
+        <Route path="fw"    component={FrameworksContainer} />
         <Route path="html"  component={HtmlContainer} />
         <Route path="js"    component={JsContainer} />
         <Route path="css"   component={CssContainer} />

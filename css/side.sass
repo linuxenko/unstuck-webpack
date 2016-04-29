@@ -15,7 +15,7 @@ $activeColor: #00796b
   &--side
     height: 100%
     background: $sideBg !important
-    //box-shadow: 0px 1px 1px #444
+    box-shadow: 0px 1px 1px #444
     .logo
       text-align: center
       color : $activeColor
@@ -55,8 +55,9 @@ $activeColor: #00796b
             font-weight: bold
             color: $activeColor
             background: linear-gradient($activeColor, darken($activeColor,3%)) bottom no-repeat
-            background-size: 100% 1px
+            background-size: 100% 0px
             transition: background-size .1s, color .15s
+            border-bottom: 1px dashed $activeColor
             &:hover
               //background: #00695c
               color: #fff
@@ -64,3 +65,5 @@ $activeColor: #00796b
               transition: background-size .1s, color .15s
 
         .description
+    li.collection-item.active
+      background: darken(#fff, 2%) !important
