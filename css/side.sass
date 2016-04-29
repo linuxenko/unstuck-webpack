@@ -14,8 +14,8 @@ $activeColor: #00796b
 
   &--side
     height: 100%
-    background: darken($sideBg, 5%) !important
-    box-shadow: 0px 1px 1px #444
+    background: $sideBg !important
+    //box-shadow: 0px 1px 1px #444
     .logo
       text-align: center
       color : $activeColor
@@ -28,13 +28,15 @@ $activeColor: #00796b
       margin: 0px
     li.collection-item
       border: none
-      background: darken($sideBg, 5%) !important
+      background: $sideBg !important
       padding: 0px
       cursor: default
       & > div
         padding: 20px
       .control
         a
+          cursor: default
+          padding: 2px 5px
           color: #828282
         border-bottom: 1px solid #888
         span
@@ -47,12 +49,18 @@ $activeColor: #00796b
         padding-top: 5px
         color: #444
       .enabled
-        background: darken($sideBg, 5%) !important
         .control
           a
+            cursor: pointer
             font-weight: bold
             color: $activeColor
-            padding-bottom: 2px
+            background: linear-gradient($activeColor, darken($activeColor,3%)) bottom no-repeat
+            background-size: 100% 1px
+            transition: background-size .1s, color .15s
             &:hover
-              border-bottom: 1px dotted #00695c
+              //background: #00695c
+              color: #fff
+              background-size: 100% 100%
+              transition: background-size .1s, color .15s
+
         .description

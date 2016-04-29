@@ -43,7 +43,7 @@ class Side extends Component {
              <div className="control">
               <Row>
                 <Col s={12}  >
-                  <a href={enabledItems.html ? '#/html' : null} >
+                  <a href={enabledItems.html ? '#/html' : null} className="waves-effect waves-light" >
                     <i className="devicons devicons-html5"></i>
                     <span> HTML </span>
                   </a>
@@ -64,7 +64,7 @@ class Side extends Component {
             <div className="control">
              <Row>
                <Col s={12}>
-                 <a href={enabledItems.js ? '#/js' : null}>
+                 <a href={enabledItems.js ? '#/js' : null} className="waves-effect waves-light">
                    <i className="devicons devicons-javascript"></i>
                    <span> Build </span>
                  </a>
@@ -85,7 +85,7 @@ class Side extends Component {
             <div className="control">
              <Row>
                <Col s={12}>
-                 <a href={enabledItems.css ? '#/css' : null}>
+                 <a href={enabledItems.css ? '#/css' : null} className="waves-effect waves-light">
                    <i className="devicons devicons-css3_full"></i>
                    <span> CSS </span>
                  </a>
