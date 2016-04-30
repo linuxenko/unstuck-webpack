@@ -27,5 +27,6 @@ export default {
     enabled : false
 
   },
-  fw : []
+  fw : [],
+  tabs : {}
 }

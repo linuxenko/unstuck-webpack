@@ -25,14 +25,18 @@ class FrameworksContainer extends Component {
     }
   }
 
+  tabSelect(tab) {
+    this.props.dispatch(Actions.TAB_DEFAULT('fw', tab))
+  }
+
   render() {
     return (
       <div className="uw_application--fw">
         <div className="uw_application--subcontainer">
           <div className="page-title">Frameworks Configuration</div>
 
-          <Tabs >
-           <Tab title="CSS Frameworks">
+          <Tabs onChange={this.tabSelect.bind(this)} defaultValue={this.props.state.tabs.fw}>
+           <Tab title="CSS Frameworks" >
             <Row className="tab-content">
              <Col s={12} className="mb-10">
               <Input name='normalize-fw' type='checkbox' label="Normalize CSS"

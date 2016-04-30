@@ -47,4 +47,11 @@ export default class Actions {
       payload : {checked}
     }
   }
+
+  static TAB_DEFAULT(page, tab) {
+    return {
+      type : 'TAB_DEFAULT',
+      payload : {page , tab}
+    }
+  }
 }

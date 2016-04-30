@@ -1,10 +1,11 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import PersistLocal from 'reducer/persist'
 
 import html from 'reducer/html'
 import js   from 'reducer/js'
 import css  from 'reducer/css'
 import fw   from 'reducer/fw'
+import tabs from 'reducer/tabs'
 
 import defaultState from 'reducer/initialState'
 const {read, write} = PersistLocal('unstuck-webpack')
@@ -16,11 +17,14 @@ const store = createStore(
     html,
     js,
     css,
-    fw
+    fw,
+    tabs
   }),
   initialState,
-  applyMiddleware(write)
+  compose(
+    applyMiddleware(write),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 )
 
-console.log(store.getState())
 export default store
