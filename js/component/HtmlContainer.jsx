@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Row, Col, Input, Icon, Tabs, Tab} from 'react-materialize'
+import {Row, Col, Input, Tabs, Tab} from 'react-materialize'
 
 import {connect} from 'react-redux'
 import Actions from 'reducer/actions'
@@ -27,7 +27,7 @@ class HtmlContainer extends Component {
         <div className="uw_application--subcontainer">
           <div className="page-title">HTML</div>
           <Tabs>
-            <Tab title="Template Support">
+            <Tab title="Formats Support">
               <Row className="tab-content">
                <Col s={12} className="mb-10">
                 <Input name='html-template' type='checkbox'
@@ -35,7 +35,6 @@ class HtmlContainer extends Component {
                   defaultValue={ enabledItems.html ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'html')}
                    />
-                  <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                 </Col>
                 {enabledItems.html ?
                   <Col s={12} className="mb-10">
@@ -49,7 +48,6 @@ class HtmlContainer extends Component {
                   label='Jade Files Support (.jade)'
                   defaultValue={ enabledItems.jade ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'jade')}/>
-                  <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                 </Col>
                 {enabledItems.jade ?
                   <Col s={12} className="mb-10">
@@ -64,7 +62,6 @@ class HtmlContainer extends Component {
                   label='Markdown Files Support (.md)'
                   defaultValue={ enabledItems.markdown ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'markdown')}/>
-                  <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                 </Col>
                 {enabledItems.markdown ?
                   <Col s={12} className="mb-10">
@@ -79,7 +76,6 @@ class HtmlContainer extends Component {
                   label='Handlebars Templates Support (.hbs)'
                   defaultValue={ enabledItems.handlebars ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'handlebars')}/>
-                  <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                 </Col>
               </Row>
             </Tab>

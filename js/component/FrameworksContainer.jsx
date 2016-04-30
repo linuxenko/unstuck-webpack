@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Row, Col, Input, Icon, Tabs, Tab} from 'react-materialize'
+import {Row, Col, Input, Tabs, Tab} from 'react-materialize'
 import Actions from 'reducer/actions'
 
 class FrameworksContainer extends Component {
@@ -86,39 +86,33 @@ class FrameworksContainer extends Component {
                 </Col>
             </Row>
           </Tab>
-           <Tab title="CSS Presets" >
+           <Tab title="CSS Tools" >
             <Row className="tab-content">
              <Col s={12} className="mb-10">
               <Input name='normalize-fw' type='checkbox' label="Normalize CSS"
                 onChange={this.toggleFramework.bind(this, 'normalize')}
                 defaultValue={this.isChecked.call(this, 'normalize')}
                 />
-                <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
               </Col>
               <Col s={12} className="mb-10">
                <Input name='animate-fw' type='checkbox' label="Animate CSS"
                 onChange={this.toggleFramework.bind(this, 'animate')}
                 defaultValue={this.isChecked.call(this, 'animate')}
                 />
-                 <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                </Col>
               <Col s={12} className="mb-10">
                <Input name='markdown-fw' type='checkbox' label="Markdown CSS"
                 onChange={this.toggleFramework.bind(this, 'markdown')}
                 defaultValue={this.isChecked.call(this, 'markdown')}
                />
-                 <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                </Col>
              </Row>
-             <h5 className="center">Font Icons</h5>
-             <hr />
              <Row className="tab-content">
               <Col s={12} className="mb-10">
                <Input name='fontawesome-fw' type='checkbox' label="Font Awesome"
                onChange={this.toggleFramework.bind(this, 'fontawesome')}
                defaultValue={this.isChecked.call(this, 'fontawesome')}
                />
-                 <Icon className="blue-text waves-effect waves-light">info_outline</Icon>
                </Col>
              </Row>
 

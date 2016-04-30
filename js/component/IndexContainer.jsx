@@ -31,15 +31,6 @@ class IndexContainer extends Component {
               <Row className="tab-content">
                 <Col s={12}>
 
-                <div className={'template-card mb-10' + (this.props.state.config.template === 'custom' ? ' active' : '')}>
-                  <Input id="custom-gen" name='group1' type='radio' className="with-gap"
-                   {...this.props.state.config.template === 'custom' ? {defaultChecked : 'checked'}: {}}
-                   onChange={this.selectTemplate.bind(this, 'custom')} />
-                   <label htmlFor="custom-gen">
-                      Manual
-                   </label>
-                </div>
-
                 <div className={'template-card mb-10' + (this.props.state.config.template === 'node' ? ' active' : '')}>
                   <Input id="node-gen" name='group1' type='radio' className="with-gap"
                   {...this.props.state.config.template === 'node' ? {defaultChecked : 'checked'}: {}}
@@ -150,6 +141,9 @@ class IndexContainer extends Component {
                  : '' }
 
               </Row>
+            </Tab>
+            <Tab title="Vendors" {...this.props.state.config.chunks.enabled ? {} : {disabled : true}}>
+
             </Tab>
           </Tabs>
         </div>

@@ -12,6 +12,9 @@ ul.tabs
       color: $activeColor
       &:hover
         color: lighten($activeColor, 10%)
+    &.disabled a
+      color: $inactiveColor
+
 
 .switch label input[type=checkbox]:checked + .lever
   background-color: lighten($activeColor, 40%)
