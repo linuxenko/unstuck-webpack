@@ -61,4 +61,19 @@ export default class Actions {
       payload : {template}
     }
   }
+
+  static CONFIG_GENERAL_TARGET(plugin = null, option, target) {
+    return {
+      type : 'CONFIG_GENERAL_TARGET',
+      payload : {plugin, option, target}
+    }
+  }
+
+  static CONFIG_TOGGLE_PLUGIN(plugin, checked = false) {
+    return {
+      type : 'CONFIG_TOGGLE_PLUGIN',
+      payload : {plugin, checked}
+    }
+  }
+
 }

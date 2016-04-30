@@ -33,7 +33,7 @@ class FrameworksContainer extends Component {
     return (
       <div className="uw_application--fw">
         <div className="uw_application--subcontainer">
-          <div className="page-title">Frameworks Configuration</div>
+          <div className="page-title">Presets</div>
 
           <Tabs onChange={this.tabSelect.bind(this)} defaultValue={this.props.state.tabs.fw}>
 

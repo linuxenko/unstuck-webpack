@@ -30,6 +30,12 @@ export default {
   fw : [],
   tabs : {},
   config : {
-    template : 'custom'
+    template : 'custom',
+    jsdir : 'app',
+    cssdir : 'css',
+    chunks : { enabled : true },
+    extract : { enabled : true },
+    assets : {enabled : true, dir : 'assets'},
+    vendors : []
   }
 }

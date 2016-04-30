@@ -21,6 +21,21 @@ class Side extends Component {
     }
   }
 
+  fitSidebar() {
+    setTimeout(() => {
+      let height = document.getElementById('uw-application-container').offsetHeight
+      this.containerEl.style.minHeight = height + 'px'
+    }, 5)
+  }
+
+  componentDidUpdate() {
+    this.fitSidebar()
+  }
+
+  componentDidMount() {
+    this.fitSidebar()
+  }
+
   render() {
     let enabledItems = {
       html : this.props.state.html.enabled,
@@ -35,7 +50,7 @@ class Side extends Component {
     }
 
     return (
-      <div  className="uw_application--side">
+      <div className="uw_application--side" ref={ref => this.containerEl = ref}>
         <div className="logo">Unstuck Webpack</div>
         <Collection>
           <CollectionItem active={activeItem === ''}>

@@ -6,7 +6,7 @@ class JsContainer extends Component {
     return (
       <div className="uw_application--fw">
         <div className="uw_application--subcontainer">
-          <div className="page-title">Build Configuration</div>
+          <div className="page-title">Javascript</div>
           <Tabs>
             <Tab title="Builder Options">
 

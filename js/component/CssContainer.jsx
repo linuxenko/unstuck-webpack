@@ -5,7 +5,7 @@ class CssContainer extends Component {
     return (
       <div className="uw_application--fw">
         <div className="uw_application--subcontainer">
-          <div className="page-title">CSS Configuration</div>
+          <div className="page-title">CSS</div>
         </div>
       </div>
     )

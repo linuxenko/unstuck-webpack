@@ -25,7 +25,7 @@ class HtmlContainer extends Component {
     return (
       <div className="uw_application--html">
         <div className="uw_application--subcontainer">
-          <div className="page-title mb-10">HTML Configuration</div>
+          <div className="page-title">HTML</div>
           <Tabs>
             <Tab title="Template Support">
               <Row className="tab-content">

@@ -13,7 +13,7 @@ class Application extends Component {
         <div className="uw_application--container container">
           <Row>
             <Col m={5} s={12}><Side route={this.props.location.pathname} /></Col>
-            <Col m={7} s={12}>
+            <Col id="uw-application-container" m={7} s={12}>
                 {this.props.children}
             </Col>
           </Row>
