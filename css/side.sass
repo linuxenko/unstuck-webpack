@@ -25,12 +25,15 @@
       background: transparent !important
       padding: 0px
       cursor: default
-      & > div
+      & > a
+        overflow: hidden
+        height: 114px
+        display: block
         padding: 20px
-      .control
-        a
+        &.disabled
           cursor: default
-          padding: 2px 5px
+      .control
+        div
           color: darken($sideActiveColor, 50%)
         border-bottom: 1px solid #888
         span
@@ -43,9 +46,9 @@
         padding-top: 5px
         color: darken($sideActiveColor, 50%)
       .enabled
+        display: block
         .control
-          a
-            cursor: pointer
+          div
             font-weight: bold
             color: $sideActiveColor
 

@@ -31,7 +31,7 @@ class IndexContainer extends Component {
               <Row className="tab-content">
                 <Col s={12}>
 
-                <div className={'template-card mb-10' + (this.props.state.config.template === 'node' ? ' active' : '')}>
+                <div className={'template-card mb-10 waves-effect' + (this.props.state.config.template === 'node' ? ' active' : '')}>
                   <Input id="node-gen" name='group1' type='radio' className="with-gap"
                   {...this.props.state.config.template === 'node' ? {defaultChecked : 'checked'}: {}}
                    onChange={this.selectTemplate.bind(this, 'node')} />
@@ -41,7 +41,7 @@ class IndexContainer extends Component {
                    </label>
                 </div>
 
-                <div className={'template-card mb-10' + (this.props.state.config.template === 'angular1' ? ' active' : '')}>
+                <div className={'template-card mb-10 waves-effect' + (this.props.state.config.template === 'angular1' ? ' active' : '')}>
                   <Input id="angular1-gen" name='group1' type='radio' className="with-gap"
                   {...this.props.state.config.template === 'angular1' ? {defaultChecked : 'checked'}: {}}
                    onChange={this.selectTemplate.bind(this, 'angular1')} />
@@ -52,7 +52,7 @@ class IndexContainer extends Component {
                    </label>
                 </div>
 
-                <div className={'template-card mb-10' + (this.props.state.config.template === 'angular2' ? ' active' : '')}>
+                <div className={'template-card mb-10 waves-effect' + (this.props.state.config.template === 'angular2' ? ' active' : '')}>
                   <Input id="angular2-gen" name='group1' type='radio' className="with-gap"
                   {...this.props.state.config.template === 'angular2' ? {defaultChecked : 'checked'}: {}}
                    onChange={this.selectTemplate.bind(this, 'angular2')} />
@@ -63,7 +63,7 @@ class IndexContainer extends Component {
                    </label>
                 </div>
 
-                  <div className={'template-card mb-10' + (this.props.state.config.template === 'react' ? ' active' : '')}>
+                  <div className={'template-card mb-10 waves-effect' + (this.props.state.config.template === 'react' ? ' active' : '')}>
                     <Input id="react-gen" name='group1' type='radio' className="with-gap"
                     {...this.props.state.config.template === 'react' ? {defaultChecked : 'checked'}: {}}
                      onChange={this.selectTemplate.bind(this, 'react')} />
@@ -74,7 +74,7 @@ class IndexContainer extends Component {
                   </div>
 
 
-                  <div className={'template-card mb-10' + (this.props.state.config.template === 'ember' ? ' active' : '')}>
+                  <div className={'template-card mb-10 waves-effect' + (this.props.state.config.template === 'ember' ? ' active' : '')}>
                     <Input id="ember-gen" name='group1' type='radio' className="with-gap"
                     {...this.props.state.config.template === 'ember' ? {defaultChecked : 'checked'}: {}}
                      onChange={this.selectTemplate.bind(this, 'ember')} />
@@ -84,7 +84,7 @@ class IndexContainer extends Component {
                      </label>
                   </div>
 
-                  <div className={'template-card' + (this.props.state.config.template === 'vue' ? ' active' : '')}>
+                  <div className={'template-card waves-effect' + (this.props.state.config.template === 'vue' ? ' active' : '')}>
                     <Input id="vue-gen" name='group1' type='radio' className="with-gap"
                     {...this.props.state.config.template === 'vue' ? {defaultChecked : 'checked'}: {}}
                      onChange={this.selectTemplate.bind(this, 'vue')} />

@@ -2,6 +2,8 @@
   .template-card
     background: $sideActiveColor
     box-shadow: 0px 1px 1px #ddd
+    display: block
+
     input:checked
       & + label:before, & + label:after
         border: none
@@ -22,6 +24,6 @@
       i
         margin-left: 5px
     &.active
-      background: $sideBg
+      background: lighten($sideBg, 10%)
       .col + label
         color: $sideActiveColor

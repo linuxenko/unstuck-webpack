@@ -16,9 +16,9 @@ class Application extends Component {
             <Col id="uw-application-container" m={7} s={12}>
                 {this.props.children}
             </Col>
-            <Button floating fab='horizontal' faicon='fa fa-bars' className="purple darken-1" large>
-              <Button floating faicon='fa fa-floppy-o' className='purple darken-3'/>
-              <Button floating faicon='fa fa-eye' className='purple darken-2'/>
+            <Button floating fab="horizontal" faicon="fa fa-bars" className="purple darken-1 waves-effect waves-light" large>
+              <Button floating faicon="fa fa-floppy-o" className="pink darken-3 waves-effect waves-light"/>
+              <Button floating faicon="fa fa-eye" className="orange darken-4 waves-effect waves-light"/>
             </Button>
           </Row>
         </div>

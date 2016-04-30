@@ -39,7 +39,7 @@ class FrameworksContainer extends Component {
 
           <Tab title="Web Frameworks">
             <Row className="tab-content">
-            <Col s={12}>
+            <Col s={12} className="mb-10">
              <Input name='bootstrap-fw' type='checkbox' label="Bootstrap Framework"
                onChange={this.toggleFramework.bind(this, 'bootstrap')}
                defaultValue={this.isChecked.call(this, 'bootstrap')}
@@ -54,7 +54,7 @@ class FrameworksContainer extends Component {
                </Input>
                : '' }
              </Col>
-              <Col s={12}>
+              <Col s={12} className="mb-10">
                  <Input name='materialize-fw' type='checkbox' label="Materialize Framework"
                    onChange={this.toggleFramework.bind(this, 'materialize')}
                    defaultValue={this.isChecked.call(this, 'materialize')}
@@ -69,7 +69,7 @@ class FrameworksContainer extends Component {
                  </Input>
                  : '' }
                </Col>
-               <Col s={12}>
+               <Col s={12} className="mb-10">
                   <Input name='foundation-fw' type='checkbox' label="Foundation Framework"
                     onChange={this.toggleFramework.bind(this, 'foundation')}
                     defaultValue={this.isChecked.call(this, 'foundation')}

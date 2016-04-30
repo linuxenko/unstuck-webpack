@@ -54,48 +54,49 @@ class Side extends Component {
         <div className="logo">Unstuck Webpack</div>
         <Collection>
           <CollectionItem active={activeItem === ''}>
-           <div className="enabled">
+           <a href="#/" className="enabled waves-effect">
              <div className="control">
               <Row>
-                <Col s={12}  >
-                  <a href="#/">
+                <Col s={12}>
+                  <div>
                     <i className="devicons devicons-dropbox"></i>
                     <span> Dashboard </span>
-                  </a>
+                  </div>
                 </Col>
               </Row>
              </div>
              <div className="description">
               General webpack configuration options
              </div>
-           </div>
+           </a>
           </CollectionItem>
           <CollectionItem active={activeItem === 'fw'}>
-           <div className="enabled">
+            <a href="#/fw" className="enabled waves-effect">
              <div className="control">
               <Row>
                 <Col s={12}  >
-                  <a href="#/fw">
+                  <div>
                     <i className="devicons devicons-npm"></i>
                     <span> Presets </span>
-                  </a>
+                  </div>
                 </Col>
               </Row>
              </div>
              <div className="description">
                Include support of predefined sets
              </div>
-           </div>
+           </a>
           </CollectionItem>
           <CollectionItem active={activeItem === 'html'}>
-           <div className={enabledItems.html === true ? 'enabled' : 'disabled'}>
+           <a href={enabledItems.html ? '#/html' : null}
+            className={enabledItems.html === true ? 'enabled waves-effect' : 'disabled'}>
              <div className="control">
               <Row>
                 <Col s={12}  >
-                  <a href={enabledItems.html ? '#/html' : null}>
+                  <div className="left">
                     <i className="devicons devicons-html5"></i>
                     <span> HTML </span>
-                  </a>
+                  </div>
                   <div className="right">
                     <Input name='html' onChange={this.switchChange.bind(this, 'html')}
                      type='switch' defaultChecked={enabledItems.html}/>
@@ -106,17 +107,17 @@ class Side extends Component {
              <div className="description">
                General html and templating configuration.
              </div>
-           </div>
+           </a>
           </CollectionItem>
           <CollectionItem active={activeItem === 'js'}>
-          <div className={enabledItems.js === true ? 'enabled' : 'disabled'}>
+          <a href={enabledItems.js ? '#/js' : null} className={enabledItems.js === true ? 'enabled waves-effect' : 'disabled'}>
             <div className="control">
              <Row>
                <Col s={12}>
-                 <a href={enabledItems.js ? '#/js' : null}>
+                 <div className="left">
                    <i className="devicons devicons-javascript"></i>
                    <span> Build </span>
-                 </a>
+                 </div>
                  <div className="right">
                    <Input name='js' type='switch' onChange={this.switchChange.bind(this, 'js')}
                    defaultChecked={enabledItems.js} />
@@ -127,17 +128,17 @@ class Side extends Component {
             <div className="description">
               Javascript builders configuration.
             </div>
-           </div>
+           </a>
           </CollectionItem>
           <CollectionItem active={activeItem === 'css'}>
-           <div className={enabledItems.css === true ? 'enabled' : 'disabled'}>
+           <a href={enabledItems.css ? '#/css' : null} className={enabledItems.css === true ? 'enabled waves-effect' : 'disabled'}>
             <div className="control">
              <Row>
                <Col s={12}>
-                 <a href={enabledItems.css ? '#/css' : null}>
+                 <div className="left">
                    <i className="devicons devicons-css3_full"></i>
                    <span> CSS </span>
-                 </a>
+                 </div>
                  <div className="right">
                    <Input name='css' type='switch' onChange={this.switchChange.bind(this, 'css')}
                    defaultChecked={enabledItems.css}/>
@@ -148,7 +149,7 @@ class Side extends Component {
             <div className="description">
               Configuration of the css builders for your css.
             </div>
-          </div>
+          </a>
           </CollectionItem>
         </Collection>
       </div>
