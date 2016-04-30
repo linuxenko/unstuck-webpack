@@ -1,0 +1,55 @@
+[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after
+  border: 2px solid $activeColor
+
+[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after
+  background-color: lighten($activeColor, 5%)
+
+ul.tabs
+  .indicator
+    background-color: $activeColor
+  .tab
+    a
+      color: $activeColor
+      &:hover
+        color: lighten($activeColor, 10%)
+
+.switch label input[type=checkbox]:checked + .lever
+  background-color: lighten($activeColor, 40%)
+  &:after
+    background-color: $activeColor
+
+.uw_application--side
+  .switch label input[type=checkbox]:checked + .lever
+    background-color: lighten($sideActiveColor, 40%)
+    &:after
+      background-color: $sideActiveColor
+
+[type="checkbox"]:checked + label:before
+  border-right-color: $activeColor
+  border-bottom-color: $activeColor
+
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea
+  border-bottom-color: $activeColor
+
+.input-field input[type=text]:focus
+  border-bottom: 1px solid $activeColor
+  box-shadow: 0 1px 0 0 $activeColor
+
+.input-field input[type=text]:focus + label
+  color: $activeColor
+
+.select-wrapper
+  .caret
+    color: $activeColor !important
+  input.select-dropdown
+    border-bottom-color: $activeColor
+
+.dropdown-content li > a, .dropdown-content li
+  background-color: $sideActiveColor
+  & > span
+    color: $sideBg
+
+.dropdown-content li:hover
+  background-color: $sideBg
+  span
+    color: $sideActiveColor

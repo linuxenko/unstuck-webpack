@@ -54,4 +54,11 @@ export default class Actions {
       payload : {page , tab}
     }
   }
+
+  static CONFIG_TEMPLATE(template) {
+    return {
+      type : 'CONFIG_TEMPLATE',
+      payload : {template}
+    }
+  }
 }

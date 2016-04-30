@@ -1,0 +1,27 @@
+.uw_application--dashboard
+  .template-card
+    background: $sideActiveColor
+    box-shadow: 0px 1px 1px #ddd
+    input:checked
+      & + label:before, & + label:after
+        border: none
+    input + label
+      margin-top: 18px
+      &:after, &:before
+        border: 1px solid $sideBg
+        width: 22px
+        height: 22px
+        background-color: $sideActiveColor
+
+    .col + label
+      font-size: 26px
+      cursor: pointer
+      display: block
+      padding: 14px
+      color: $sideBg
+      i
+        margin-left: 5px
+    &.active
+      background: $sideBg
+      .col + label
+        color: $sideActiveColor

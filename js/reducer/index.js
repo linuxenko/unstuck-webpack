@@ -6,6 +6,7 @@ import js   from 'reducer/js'
 import css  from 'reducer/css'
 import fw   from 'reducer/fw'
 import tabs from 'reducer/tabs'
+import config from 'reducer/config'
 
 import defaultState from 'reducer/initialState'
 const {read, write} = PersistLocal('unstuck-webpack')
@@ -18,7 +19,8 @@ const store = createStore(
     js,
     css,
     fw,
-    tabs
+    tabs,
+    config
   }),
   initialState,
   compose(

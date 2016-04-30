@@ -28,5 +28,8 @@ export default {
 
   },
   fw : [],
-  tabs : {}
+  tabs : {},
+  config : {
+    template : 'custom'
+  }
 }
