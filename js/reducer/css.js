@@ -1,9 +1,4 @@
-const initialState = {
-  enabled : true
-}
-
-
-export default function(state = initialState, action) {
+export default function(state = {}, action) {
 
   if (action.type === 'TOGGLE_CSS') {
     state.enabled = action.payload.checked

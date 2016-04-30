@@ -1,6 +1,4 @@
-const initialState = []
-
-export default function(state = initialState, action) {
+export default function(state = [], action) {
 
   if (action.type === 'FW_ADD_FRAMEWORK') {
     if (state.indexOf(action.payload.fw) === -1) {

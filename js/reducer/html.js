@@ -1,27 +1,4 @@
-
-const initialState = {
-  enabled : true,
-  templates : {
-    html : {
-      enabled : true,
-      target : '/'
-    },
-    jade : {
-      enabled : false,
-      target : '/assets/html/'
-    },
-    markdown : {
-      enabled : false,
-      target : '/assets/html/'
-    },
-    handlebars : {
-      enabled : false
-    }
-  }
-}
-
-
-export default function(state = initialState, action) {
+export default function(state = {}, action) {
 
   if (action.type === 'TOGGLE_HTML') {
     state.enabled = action.payload.checked

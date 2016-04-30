@@ -68,6 +68,7 @@ class FrameworksContainer extends Component {
                 <Input s={12} type='select' className=""
                   defaultValue={this.isChecked.call(this, 'bootstrap-js') ? 'bootstrap-js' : 'bootstrap'}
                   onChange={this.toggleFwOption.bind(this, 'bootstrap-js')}>
+                  <option value="" disabled>Bootstrap Options</option>
                   <option value='bootstrap'>Bootstrap (CSS only)</option>
                   <option value='bootstrap-js'>Bootstrap (JS + CSS)</option>
                 </Input>
@@ -82,11 +83,27 @@ class FrameworksContainer extends Component {
                   <Input s={12} type='select' className=""
                     defaultValue={this.isChecked.call(this, 'materialize-js') ? 'materialize-js' : 'materialize'}
                     onChange={this.toggleFwOption.bind(this, 'materialize-js')}>
+                    <option value="" disabled>Materialize Options</option>
                     <option value='materialize'>Materialize (CSS only)</option>
                     <option value='materialize-js'>Materialize (JS + CSS)</option>
                   </Input>
                   : '' }
                 </Col>
+                <Col s={12}>
+                   <Input name='foundation-fw' type='checkbox' label="Foundation Framework"
+                     onChange={this.toggleFramework.bind(this, 'foundation')}
+                     defaultValue={this.isChecked.call(this, 'foundation')}
+                   />
+                   {this.isChecked.call(this, 'foundation') ?
+                   <Input s={12} type='select' className=""
+                     defaultValue={this.isChecked.call(this, 'foundation-js') ? 'foundation-js' : 'foundation'}
+                     onChange={this.toggleFwOption.bind(this, 'foundation-js')}>
+                     <option value="" disabled>Foundation Options</option>
+                     <option value='foundation'>Foundation (CSS only)</option>
+                     <option value='foundation-js'>Foundation (JS + CSS)</option>
+                   </Input>
+                   : '' }
+                 </Col>
              </Row>
            </Tab>
            <Tab title="Font Icons">
