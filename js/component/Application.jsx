@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Row, Col} from 'react-materialize'
+import {Row, Col, Button} from 'react-materialize'
 
 import Side from 'component/Side.jsx'
 
@@ -16,6 +16,10 @@ class Application extends Component {
             <Col id="uw-application-container" m={7} s={12}>
                 {this.props.children}
             </Col>
+            <Button floating fab='horizontal' faicon='fa fa-bars' className="purple darken-1" large>
+              <Button floating faicon='fa fa-floppy-o' className='purple darken-3'/>
+              <Button floating faicon='fa fa-eye' className='purple darken-2'/>
+            </Button>
           </Row>
         </div>
       </div>
