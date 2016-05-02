@@ -76,4 +76,18 @@ export default class Actions {
     }
   }
 
+  static JS_TOGGLE_LINTER(checked = false) {
+    return {
+      type : 'JS_TOGGLE_LINTER',
+      payload : {checked}
+    }
+  }
+
+  static JS_SELECT_TRANSPILLER(transpiller = 'none') {
+    return {
+      type : 'JS_SELECT_TRANSPILLER',
+      payload : {transpiller}
+    }
+  }
+
 }

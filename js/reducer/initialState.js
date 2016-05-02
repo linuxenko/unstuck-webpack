@@ -20,8 +20,9 @@ export default {
     }
   },
   js : {
-    enabled : false
-
+    enabled : false,
+    transpiller : 'none',
+    linter : false
   },
   css : {
     enabled : false
