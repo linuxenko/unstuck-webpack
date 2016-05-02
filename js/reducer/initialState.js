@@ -21,6 +21,7 @@ export default {
   },
   js : {
     enabled : false,
+    sourceMap : 'none',
     transpiller : {babel : false, react : false, vue : false},
     linter : false
   },

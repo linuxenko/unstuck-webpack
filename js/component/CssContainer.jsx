@@ -24,7 +24,7 @@ class CssContainer extends Component {
                   />
               </Col>
 
-                <div className="mb-10"><strong>Transpillers:</strong></div>
+                <div className="mb-10"><strong>Preprocessors:</strong></div>
                   <Col s={12} className="mb-10">
                     <Input id="less-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Less transpiller (.less)"

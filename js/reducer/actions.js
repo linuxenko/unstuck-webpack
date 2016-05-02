@@ -90,4 +90,11 @@ export default class Actions {
     }
   }
 
+  static JS_SELECT_SOURCEMAP(sourcemap = 'none') {
+    return {
+      type : 'JS_SELECT_SOURCEMAP',
+      payload : {sourcemap}
+    }
+  }
+
 }

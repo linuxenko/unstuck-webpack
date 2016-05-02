@@ -15,5 +15,10 @@ export default function(state = {}, action) {
     return Object.assign({}, state)
   }
 
+  if (action.type === 'JS_SELECT_SOURCEMAP') {
+    state.sourceMap = action.payload.sourcemap
+    return Object.assign({}, state)
+  }
+
   return state
 }
