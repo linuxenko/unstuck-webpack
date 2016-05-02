@@ -11,7 +11,7 @@ export default function(state = {}, action) {
   }
 
   if (action.type === 'JS_SELECT_TRANSPILLER') {
-    state.transpiller = action.payload.transpiller
+    state.transpiller[action.payload.transpiller] = action.payload.checked
     return Object.assign({}, state)
   }
 

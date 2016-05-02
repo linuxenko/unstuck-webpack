@@ -83,10 +83,10 @@ export default class Actions {
     }
   }
 
-  static JS_SELECT_TRANSPILLER(transpiller = 'none') {
+  static JS_SELECT_TRANSPILLER(transpiller = 'none', checked = false) {
     return {
       type : 'JS_SELECT_TRANSPILLER',
-      payload : {transpiller}
+      payload : {transpiller, checked}
     }
   }
 

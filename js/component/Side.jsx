@@ -116,7 +116,7 @@ class Side extends Component {
                <Col s={12}>
                  <div className="left">
                    <i className="devicons devicons-javascript"></i>
-                   <span> Build </span>
+                   <span> Transpiller </span>
                  </div>
                  <div className="right">
                    <Input name='js' type='switch' onChange={this.switchChange.bind(this, 'js')}
