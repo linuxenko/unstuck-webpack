@@ -26,8 +26,9 @@ export default {
     linter : false
   },
   css : {
-    enabled : false
-
+    enabled : false,
+    autoprefix : false,
+    transpiller : { less : false, sass : false, styl : false}
   },
   fw : [],
   tabs : {},

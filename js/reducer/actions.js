@@ -97,4 +97,18 @@ export default class Actions {
     }
   }
 
+  static CSS_SELECT_TRANSPILLER(transpiller = 'none', checked = false) {
+    return {
+      type : 'CSS_SELECT_TRANSPILLER',
+      payload : {transpiller, checked}
+    }
+  }
+
+  static CSS_TOGGLE_AUTOPREFIX(checked = false) {
+    return {
+      type : 'CSS_TOGGLE_AUTOPREFIX',
+      payload : {checked}
+    }
+  }
+
 }
