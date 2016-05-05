@@ -11,6 +11,7 @@ class FrameworksContainer extends Component {
       this.props.dispatch(Actions.ADD_FW(fw))
     } else {
       this.props.dispatch(Actions.FW_REMOVE_FRAMEWORK(fw))
+      this.props.dispatch(Actions.FW_REMOVE_FRAMEWORK(fw + '-js'))
     }
   }
 
@@ -92,28 +93,28 @@ class FrameworksContainer extends Component {
             <Row className="tab-content">
              <Col s={12} className="mb-10">
               <Input name='normalize-fw' type='checkbox' label="Normalize CSS"
-                onChange={this.toggleFramework.bind(this, 'normalize')}
-                checked={this.isChecked.call(this, 'normalize')}
+                onChange={this.toggleFramework.bind(this, 'normalize-css')}
+                checked={this.isChecked.call(this, 'normalize-css')}
                 />
               </Col>
               <Col s={12} className="mb-10">
                <Input name='animate-fw' type='checkbox' label="Animate CSS"
-                onChange={this.toggleFramework.bind(this, 'animate')}
-                checked={this.isChecked.call(this, 'animate')}
+                onChange={this.toggleFramework.bind(this, 'animate.css')}
+                checked={this.isChecked.call(this, 'animate.css')}
                 />
                </Col>
               <Col s={12} className="mb-10">
                <Input name='markdown-fw' type='checkbox' label="Markdown CSS"
-                onChange={this.toggleFramework.bind(this, 'markdown')}
-                checked={this.isChecked.call(this, 'markdown')}
+                onChange={this.toggleFramework.bind(this, 'github-markdown-css')}
+                checked={this.isChecked.call(this, 'github-markdown-css')}
                />
                </Col>
              </Row>
              <Row className="tab-content">
               <Col s={12} className="mb-10">
                <Input name='fontawesome-fw' type='checkbox' label="Font Awesome"
-               onChange={this.toggleFramework.bind(this, 'fontawesome')}
-               checked={this.isChecked.call(this, 'fontawesome')}
+               onChange={this.toggleFramework.bind(this, 'font-awesome')}
+               checked={this.isChecked.call(this, 'font-awesome')}
                />
                </Col>
              </Row>
