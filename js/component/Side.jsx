@@ -23,8 +23,10 @@ class Side extends Component {
 
   fitSidebar() {
     setTimeout(() => {
-      let height = document.getElementById('uw-application-container').offsetHeight
-      this.containerEl.style.minHeight = height + 'px'
+      try {
+        let height = document.getElementById('uw-application-container').offsetHeight
+        this.containerEl.style.minHeight = height + 'px'
+      } catch(e) { console.log(e)}
     }, 5)
   }
 
