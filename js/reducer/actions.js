@@ -18,17 +18,10 @@ export default class Actions {
     }
   }
 
-  static ADD_VENDOR(vendor = null) {
+  static TOGGLE_VENDOR(vendor = null, checked = false) {
     return {
-      type : 'ADD_VENDOR',
-      payload : {vendor}
-    }
-  }
-
-  static REMOVE_VENDOR(vendor = null) {
-    return {
-      type : 'REMOVE_VENDOR',
-      payload : {vendor}
+      type : 'TOGGLE_VENDOR',
+      payload : {vendor, checked}
     }
   }
 

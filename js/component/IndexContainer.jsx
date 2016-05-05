@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Tabs, Tab, Row, Col, Input} from 'react-materialize'
+import VendorsTab from 'component/VendorsTab.jsx'
 import Actions from 'reducer/actions'
 
 class IndexContainer extends Component {
@@ -9,8 +10,6 @@ class IndexContainer extends Component {
   }
 
   selectTemplate(template) {
-    //this.props.dispatch(Actions.RESET())
-    //this.props.dispatch(Actions.CONFIG_TEMPLATE(template))
     this.props.dispatch(Actions.SET_TEMPLATE(template))
   }
 
@@ -146,7 +145,7 @@ class IndexContainer extends Component {
               </Row>
             </Tab>
             <Tab title="Vendors" {...this.props.state.config.chunks.enabled ? {} : {disabled : true}}>
-
+              <VendorsTab />
             </Tab>
           </Tabs>
         </div>
