@@ -13,11 +13,10 @@ import JsContainer from 'component/JsContainer.jsx'
 import CssContainer from 'component/CssContainer.jsx'
 import FrameworksContainer from 'component/FrameworksContainer.jsx'
 
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={Application}>
+      <Route path="/" components={Application}>
         <IndexRoute component={IndexContainer} />
         <Route path="fw"    component={FrameworksContainer} />
         <Route path="html"  component={HtmlContainer} />

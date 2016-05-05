@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Row, Col, Button, Modal} from 'react-materialize'
 
-import Side from 'component/Side.jsx'
 import PreviewModal from 'component/PreviewModal.jsx'
+import Side from 'component/Side.jsx'
 
+import store from 'reducer/index'
 
 class Application extends Component {
-
   render() {
     return (
       <div className="uw_application">
@@ -21,7 +21,7 @@ class Application extends Component {
               <Button floating faicon="fa fa-floppy-o" className="pink darken-3 waves-effect waves-light"/>
               <Modal header="Preview Settings"
                 trigger={<Button floating faicon="fa fa-eye" className="orange darken-4 waves-effect waves-light"/>} fixedFooter>
-                <PreviewModal />
+                <PreviewModal store={store} />
               </Modal>
             </Button>
           </Row>
