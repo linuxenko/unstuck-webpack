@@ -33,7 +33,7 @@ class JsContainer extends Component {
                 <Col s={12} className="mb-10">
                   <Input name='linter-template' type='checkbox'
                     label='Enable linter (eslint)'
-                    defaultValue={this.props.state.js.linter ? 'on' : ''}
+                    checked={this.props.state.js.linter ? 'on' : ''}
                     onChange={this.toggleLinter.bind(this)}
                     />
                 </Col>
@@ -74,7 +74,7 @@ class JsContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="babel-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Babel"
-                      defaultValue={this.props.state.js.transpiller.babel ? 'on' : ''}
+                      checked={this.props.state.js.transpiller.babel ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'babel')}
                        />
                   </Col>
@@ -82,7 +82,7 @@ class JsContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="react-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Babel + React"
-                      defaultValue={this.props.state.js.transpiller.react ? 'on' : ''}
+                      checked={this.props.state.js.transpiller.react ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'react')}
                        />
                   </Col>
@@ -90,7 +90,7 @@ class JsContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="vue-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Babel + Vue"
-                      defaultValue={this.props.state.js.transpiller.vue ? 'on' : ''}
+                      checked={this.props.state.js.transpiller.vue ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'vue')}
                        />
                   </Col>

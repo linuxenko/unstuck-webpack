@@ -1,4 +1,37 @@
+import {TemplateConfigurator, FrameworkConfigurator} from 'configurator/index'
+
 export default class Actions {
+
+  static SET_TEMPLATE(template = null) {
+    return dispatch => TemplateConfigurator(dispatch, template)
+  }
+
+  static ADD_FW(fw = null) {
+    return dispatch => FrameworkConfigurator(dispatch, fw)
+  }
+
+
+  static RESET() {
+    return {
+      type : 'RESET',
+      payload : null
+    }
+  }
+
+  static ADD_VENDOR(vendor = null) {
+    return {
+      type : 'ADD_VENDOR',
+      payload : {vendor}
+    }
+  }
+
+  static REMOVE_VENDOR(vendor = null) {
+    return {
+      type : 'REMOVE_VENDOR',
+      payload : {vendor}
+    }
+  }
+
   static TOGGLE_HTML(checked = false) {
     return {
       type : 'TOGGLE_HTML',

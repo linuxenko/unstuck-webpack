@@ -9,7 +9,9 @@ class IndexContainer extends Component {
   }
 
   selectTemplate(template) {
-    this.props.dispatch(Actions.CONFIG_TEMPLATE(template))
+    //this.props.dispatch(Actions.RESET())
+    //this.props.dispatch(Actions.CONFIG_TEMPLATE(template))
+    this.props.dispatch(Actions.SET_TEMPLATE(template))
   }
 
   setTarget(plugin, option, e) {
@@ -103,17 +105,18 @@ class IndexContainer extends Component {
                    defaultValue={this.props.state.config.jsdir}
                    onChange={this.setTarget.bind(this, null, 'jsdir')}
                     />
-
+                  {this.props.state.css.enabled ?
                   <Input s={6} name="css-dir" label="CSS Directory"
                    defaultValue={this.props.state.config.cssdir}
                    onChange={this.setTarget.bind(this, null, 'cssdir')}
                     />
+                   : <Col s={6} /> }
                 </Col>
 
                 <Col s={12} className="mb-10">
                 <Input name='chunks-plugin' type='checkbox'
                   label='Chunks plugin settings'
-                  defaultValue={ this.props.state.config.chunks.enabled ? 'on' : ''}
+                  checked={ this.props.state.config.chunks.enabled ? 'on' : ''}
                   onChange={this.togglePlugin.bind(this, 'chunks')}
                    />
                 </Col>
@@ -121,7 +124,7 @@ class IndexContainer extends Component {
                 <Col s={12} className="mb-10">
                 <Input name='extract-plugin' type='checkbox'
                   label='TextExtract plugin settings'
-                  defaultValue={ this.props.state.config.chunks.enabled ? 'on' : ''}
+                  checked={ this.props.state.config.extract.enabled ? 'on' : ''}
                   onChange={this.togglePlugin.bind(this, 'extract')}
                    />
                 </Col>
@@ -129,7 +132,7 @@ class IndexContainer extends Component {
                 <Col s={12} className="mb-10">
                     <Input name='assets-plugin' type='checkbox'
                       label='Assets file loader settings (.png,.woff,.ttf...)'
-                      defaultValue={ this.props.state.config.assets.enabled ? 'on' : ''}
+                      checked={ this.props.state.config.assets.enabled ? 'on' : ''}
                       onChange={this.togglePlugin.bind(this, 'assets')}
                        />
                 </Col>

@@ -32,7 +32,7 @@ class HtmlContainer extends Component {
                <Col s={12} className="mb-10">
                 <Input name='html-template' type='checkbox'
                   label='HTML Files Support (.html)'
-                  defaultValue={ enabledItems.html ? 'on' : ''}
+                  checked={ enabledItems.html ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'html')}
                    />
                 </Col>
@@ -46,7 +46,7 @@ class HtmlContainer extends Component {
                 <Col s={12} className="mb-10">
                   <Input name='jade-template' type='checkbox'
                   label='Jade Files Support (.jade)'
-                  defaultValue={ enabledItems.jade ? 'on' : ''}
+                  checked={ enabledItems.jade ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'jade')}/>
                 </Col>
                 {enabledItems.jade ?
@@ -60,7 +60,7 @@ class HtmlContainer extends Component {
                 <Col s={12} className="mb-10">
                   <Input name='markdown-template' type='checkbox'
                   label='Markdown Files Support (.md)'
-                  defaultValue={ enabledItems.markdown ? 'on' : ''}
+                  checked={ enabledItems.markdown ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'markdown')}/>
                 </Col>
                 {enabledItems.markdown ?
@@ -74,7 +74,7 @@ class HtmlContainer extends Component {
                 <Col s={12} className="mb-10">
                   <Input name='handlebars-template' type='checkbox'
                   label='Handlebars Templates Support (.hbs)'
-                  defaultValue={ enabledItems.handlebars ? 'on' : ''}
+                  checked={ enabledItems.handlebars ? 'on' : ''}
                   onChange={this.toggleTemplate.bind(this,'handlebars')}/>
                 </Col>
               </Row>

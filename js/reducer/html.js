@@ -1,4 +1,10 @@
+import initialState from 'reducer/initialState'
+
 export default function(state = {}, action) {
+
+  if (action.type === 'RESET') {
+    return Object.assign({}, initialState.html)
+  }
 
   if (action.type === 'TOGGLE_HTML') {
     state.enabled = action.payload.checked

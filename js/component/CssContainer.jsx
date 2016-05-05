@@ -30,7 +30,7 @@ class CssContainer extends Component {
               <Col s={12} className="mb-10">
                 <Input id="autoprefixer-gen" name="transpiller-group"
                   type='checkbox' className="with-gap" label="Enable autoprefixer"
-                  defaultValue={this.props.state.css.autoprefix ? 'on' : ''}
+                  checked={this.props.state.css.autoprefix ? 'on' : ''}
                   onChange={this.toggleAutoprefix.bind(this)}
                   />
               </Col>
@@ -39,7 +39,7 @@ class CssContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="less-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Less transpiller (.less)"
-                      defaultValue={this.props.state.css.transpiller.less ? 'on' : ''}
+                      checked={this.props.state.css.transpiller.less ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'less')}
                       />
                   </Col>
@@ -47,7 +47,7 @@ class CssContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="sass-scss-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Sass transpiller (.scss/.sass)"
-                      defaultValue={this.props.state.css.transpiller.sass ? 'on' : ''}
+                      checked={this.props.state.css.transpiller.sass ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'sass')}
                       />
                   </Col>
@@ -55,7 +55,7 @@ class CssContainer extends Component {
                   <Col s={12} className="mb-10">
                     <Input id="stylus-gen" name="transpiller-group"
                       type='checkbox' className="with-gap" label="Stylus transpiller (.styl)"
-                      defaultValue={this.props.state.css.transpiller.styl ? 'on' : ''}
+                      checked={this.props.state.css.transpiller.styl ? 'on' : ''}
                       onChange={this.selectTranspiller.bind(this, 'styl')}
                       />
                   </Col>

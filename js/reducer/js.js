@@ -1,4 +1,12 @@
+import initialState from 'reducer/initialState'
+
 export default function(state = {}, action) {
+
+  if (action.type === 'RESET') {
+    let init = Object.assign({}, initialState.js)
+    init.transpiller = Object.assign({}, initialState.js.transpiller)
+    return init
+  }
 
   if (action.type === 'TOGGLE_JS') {
     state.enabled = action.payload.checked
