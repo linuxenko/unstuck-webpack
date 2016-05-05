@@ -6,7 +6,7 @@ import {Row, Col, Input} from 'react-materialize'
 class VendorsTab extends Component {
   cssVendor() {
     if (this.props.state.css.enabled === false) {
-      return [null]
+      return []
     }
     let trp = this.props.state.css.transpiller
 
@@ -21,11 +21,13 @@ class VendorsTab extends Component {
     if (trp.styl) {
       return ['vendors.styl']
     }
+
+    return []
   }
 
   jsVendor() {
     if (this.props.state.js.enabled === false) {
-      return [null]
+      return []
     }
 
     let trp = this.props.state.js.transpiller
@@ -33,6 +35,8 @@ class VendorsTab extends Component {
     if (trp.react === true) {
       return ['react', 'react-dom']
     }
+
+    return []
   }
 
   isChecked(vendor) {
@@ -44,7 +48,7 @@ class VendorsTab extends Component {
   }
 
   render() {
-    let vendours = [...this.cssVendor(),...this.jsVendor()].map(v => {
+    let vendours = [...this.cssVendor.call(this),...this.jsVendor.call(this)].map(v => {
       return (
         <Col s={12} key={v}>
           <Input name={v} type='checkbox'
