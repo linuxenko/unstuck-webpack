@@ -6,4 +6,5 @@ window.$ = window.jQuery = require('jquery')
 window.$.velocity = require('velocity-animate/velocity.js')
 
 import 'materialize-css/dist/js/materialize.js'
+import 'prism/prism.js'
 import './js/index.jsx'

@@ -52,7 +52,7 @@ module.exports = {
             {
               test: /\.js($|\?)|\.jsx($|\?)/,
               loaders: ['eslint'],
-              exclude : [/react-materialize/,/node_modules/]
+              exclude : [/react-materialize/, /prism/,/node_modules/]
             }
         ]
     },
