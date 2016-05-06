@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import Prism from 'prism/prism'
 import $ from 'jquery'
 
-import {NpmConfigurator} from 'configurator'
+import {NpmConfigurator, WebpackConfigurator} from 'configurator'
 
 class PreviewModal extends Component {
   componentDidMount() {
@@ -21,6 +21,12 @@ class PreviewModal extends Component {
         <pre className="prism">
           <code className="prism language-json">
             {JSON.stringify(NpmConfigurator(this.props.state), null, 2)}
+          </code>
+        </pre>
+        <strong>webpack.config.js</strong>
+        <pre className="prism">
+          <code className="prism language-javascript">
+            {WebpackConfigurator(this.props.state)}
           </code>
         </pre>
       </div>
