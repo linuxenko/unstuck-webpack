@@ -14,7 +14,9 @@ export default function(state = {}, action) {
       state.vendors.push(action.payload.vendor)
     } else {
       let idx = state.vendors.indexOf(action.payload.vendor)
-      state.vendors = state.vendors.slice(0, idx).concat(state.vendors.slice(idx + 1))
+      if (idx > -1) {
+        state.vendors = state.vendors.slice(0, idx).concat(state.vendors.slice(idx + 1))
+      }
     }
     return Object.assign({}, state)
   }
