@@ -45,7 +45,7 @@ let configHeader = function(names) {
           ]${names.isLinter ? `,
           preLoaders: [
             {
-              test: /\.js($|\?)|\.jsx($|\?)/,
+              test: /\\.js($|\\?)|\\.jsx($|\\?)/,
               loaders: ['eslint'],
               exclude : [/node_modules/]
             }
@@ -60,7 +60,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'babel-loader',
-                test: /\.js($|\?)|\.jsx($|\?)/,
+                test: /\\.js($|\\?)|\\.jsx($|\\?)/,
                 exclude: /node_modules/,
                 presets : ['es2015', 'react']
             }`
@@ -70,7 +70,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'babel-loader',
-                test: /\.js$/,
+                test: /\\.js$/,
                 exclude: /node_modules/,
                 presets : ['es2015']
             }`
@@ -80,8 +80,16 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'vue-loader',
-                test: /\.vue$/,
+                test: /\\.vue$/,
                 exclude: /node_modules/
+            }`
+  }
+
+  if (loader === 'assets') {
+    return `
+            {
+                loader: 'file?name=${options.dir}[name].[ext]',
+                test: /\\.png($|\\?)|\\.woff($|\\?)|\\.woff2($|\\?)|\\.ttf($|\\?)|\\.eot($|\\?)|\\.svg($|\\?)/
             }`
   }
 
@@ -89,7 +97,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'file?name=${options.dir}[name].html',
-                test: /\.html$/
+                test: /\\.html$/
             }`
   }
 
@@ -97,7 +105,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'file?name=${options.dir}[name].html!jade-loader',
-                test: /\.jade$/
+                test: /\\.jade$/
             }`
   }
 
@@ -105,7 +113,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'file?name=${options.dir}[name].html!markdown-loader',
-                test: /\.md$/
+                test: /\\.md$/
             }`
   }
 
@@ -113,7 +121,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'handlebars-loader',
-                test: /\.handlebars$/
+                test: /\\.handlebars$/
             }`
   }
 
@@ -121,7 +129,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'style-loader!css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}less-loader?sourceMap',
-                test: /\.less$/
+                test: /\\.less$/
             }`
   }
 
@@ -129,7 +137,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}less-loader?sourceMap'),
-                test: /\.less$/
+                test: /\\.less$/
             }`
   }
 
@@ -137,7 +145,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'style-loader!css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}sass-loader?sourceMap',
-                test: /\.sass$/
+                test: /\\.sass$/
             }`
   }
 
@@ -145,7 +153,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}sass-loader?sourceMap'),
-                test: /\.sass$/
+                test: /\\.sass$/
             }`
   }
 
@@ -153,7 +161,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: 'style-loader!css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}stylus-loader?sourceMap',
-                test: /\.styl$/
+                test: /\\.styl$/
             }`
   }
 
@@ -161,7 +169,7 @@ let createLoader = function(loader, options) {
     return `
             {
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!${options.prefix ? 'postcss-loader!' : ''}stylus-loader?sourceMap'),
-                test: /\.styl$/
+                test: /\\.styl$/
             }`
   }
 }
@@ -186,6 +194,10 @@ export default function WebpackConfigurator(state) {
 
   if (state.config.chunks.enabled === true) {
     options.plugins.chunks = true
+  }
+
+  if (state.config.assets.enabled === true) {
+    options.loaders.push(createLoader('assets', {dir : state.config.assets.dir}))
   }
 
 /* js */
