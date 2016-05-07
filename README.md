@@ -13,7 +13,7 @@
     * React
     * Vuejs
     * Nodejs
-  * Html and css plugins configuration
+  * HTML preprocessors
   * CSS preprocessors and options
   * General project build settings
   * Many more
