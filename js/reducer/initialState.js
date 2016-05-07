@@ -8,11 +8,11 @@ export default {
       },
       jade : {
         enabled : false,
-        target : '/assets/html/'
+        target : '/'
       },
       markdown : {
         enabled : false,
-        target : '/assets/html/'
+        target : '/'
       },
       handlebars : {
         enabled : false

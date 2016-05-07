@@ -3,7 +3,9 @@ import initialState from 'reducer/initialState'
 export default function(state = {}, action) {
 
   if (action.type === 'RESET') {
-    return Object.assign({}, initialState.config)
+    let init  = Object.assign({}, initialState.config)
+    init.vendors = []
+    return init
   }
 
   if (action.type === 'TOGGLE_VENDOR') {
