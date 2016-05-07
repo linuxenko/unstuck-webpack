@@ -1,4 +1,7 @@
-# Unstuck-Webpack
+# Unstuck-Webpack ([Online](http://linuxenko.github.io/unstuck-webpack))
+
+[![](https://raw.githubusercontent.com/linuxenko/unstuck-webpack/master/media/screen.png)](http://linuxenko.github.io/unstuck-webpack)
+
 
  Webpack based projects configurator
 
@@ -16,5 +19,5 @@
 
 ### Usage
 
-Configure and save project files (.zip).
+[Configure](http://linuxenko.github.io/unstuck-webpack) and save project files (.zip).
 Extract them and run `npm install`.
