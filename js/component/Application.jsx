@@ -24,6 +24,8 @@ class Application extends Component {
                 {this.props.children}
             </Col>
             <Button floating fab="horizontal" faicon="fa fa-bars" className="purple darken-1 waves-effect waves-light" large>
+              <Button floating faicon="fa fa-github"
+              node="a" href="https://github.com/linuxenko/unstuck-webpack" className="black waves-effect waves-light"/>
               <Button floating faicon="fa fa-floppy-o" onClick={this.zipConfig.bind(this)}
               className="pink darken-3 waves-effect waves-light"/>
               <Modal header="Preview Settings"
