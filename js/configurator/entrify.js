@@ -1,12 +1,26 @@
+import VendoredJS from './tpl/vendoredjs'
+import VendoredCSS from './tpl/vendoredcss'
+import Angular1 from './tpl/angular1'
+
+
 const nodeApp = `
   console.log(\`hello world from \${__dirname}\`)
 `
 
 export default function EntrifyConfigurator(state) {
+  let entries = { app : null, idx : VendoredJS(state), vcss: VendoredCSS(state) , css : ''}
 
   if (state.config.template === 'node') {
-    return  { app : nodeApp , idx : null }
+    entries.app = nodeApp
+    return entries
   }
 
-  return {app : null, idx : null}
+  if (state.config.template === 'angular1') {
+    entries.app = Angular1(state)
+    return entries
+  }
+
+
+
+  return entries
 }

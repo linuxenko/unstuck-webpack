@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import Prism from 'prism/prism'
 import $ from 'jquery'
 
-import {NpmConfigurator, WebpackConfigurator} from 'configurator'
+import {NpmConfigurator, WebpackConfigurator, EntrifyConfigurator} from 'configurator'
 
 class PreviewModal extends Component {
   componentDidMount() {
@@ -17,6 +17,18 @@ class PreviewModal extends Component {
     return (
       <div>
         <p>Files containing project settings.</p>
+        <strong>index.js</strong>
+        <pre className="prism">
+          <code className="prism language-javascript">
+            {EntrifyConfigurator(this.props.state).idx}
+          </code>
+        </pre>
+        <strong>{this.props.state.config.cssdir}/vendors.</strong>
+        <pre className="prism">
+          <code className="prism language-javascript">
+            {EntrifyConfigurator(this.props.state).vcss}
+          </code>
+        </pre>
         <strong>package.json</strong>
         <pre className="prism">
           <code className="prism language-json">

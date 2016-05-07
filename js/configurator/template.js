@@ -15,6 +15,7 @@ export default function TemplateConfigurator(dispatch, template) {
   if (template === 'angular1') {
     dispatch(Actions.TOGGLE_JS(true))
     dispatch(Actions.TOGGLE_CSS(true))
+    dispatch(Actions.JS_SELECT_TRANSPILLER('babel', true))
     dispatch(Actions.CSS_SELECT_TRANSPILLER('less', true))
     dispatch(Actions.FW_ADD_FRAMEWORK('jquery'))
     dispatch(Actions.FW_ADD_FRAMEWORK('angular1'))
