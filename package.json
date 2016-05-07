@@ -31,6 +31,7 @@
     "file-loader": "^0.8.5",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.3",
+    "jszip": "^3.0.0",
     "materialize-css": "^0.97.6",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.2",
