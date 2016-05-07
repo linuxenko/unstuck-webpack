@@ -1,5 +1,7 @@
 # Unstuck-Webpack ([Online](http://linuxenko.github.io/unstuck-webpack))
 
+#### WARNING ! Development still in progress
+
 [![](https://raw.githubusercontent.com/linuxenko/unstuck-webpack/master/media/screen.png)](http://linuxenko.github.io/unstuck-webpack)
 
 
