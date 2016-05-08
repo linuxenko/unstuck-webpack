@@ -16,7 +16,7 @@ let cssTranspiller = ts => {
 export default function VendoredJS(state) {
   let out = ''
 
-  if (state.config.cssdir.length > 0 && state.config.cssdir !== '/') {
+  if (state.css.enabled === true && state.config.cssdir.length > 0 && state.config.cssdir !== '/') {
     out += `\nimport \'./${state.config.cssdir}/vendors.${cssTranspiller(state.css.transpiller)}\'`
     out += `\nimport \'./${state.config.cssdir}/application.${cssTranspiller(state.css.transpiller)}\'`
   }
@@ -38,6 +38,6 @@ export default function VendoredJS(state) {
   }
 
   out += `\nimport \'./${state.config.jsdir}/index.js\'`
-  
-  return out
+
+  return out.replace(/^\n/,'')
 }

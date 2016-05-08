@@ -5,6 +5,7 @@ import Prism from 'prism/prism'
 import $ from 'jquery'
 
 import {NpmConfigurator, WebpackConfigurator, EntrifyConfigurator} from 'configurator'
+import {TS} from 'configurator/util'
 
 class PreviewModal extends Component {
   componentDidMount() {
@@ -23,12 +24,16 @@ class PreviewModal extends Component {
             {EntrifyConfigurator(this.props.state).idx}
           </code>
         </pre>
-        <strong>{this.props.state.config.cssdir}/vendors.</strong>
-        <pre className="prism">
-          <code className="prism language-javascript">
-            {EntrifyConfigurator(this.props.state).vcss}
-          </code>
-        </pre>
+        {this.props.state.css.enabled === true ?
+          <div>
+          <strong>{this.props.state.config.cssdir}/vendors.{TS(this.props.state.css.transpiller)}</strong>
+          <pre className="prism">
+            <code className="prism language-javascript">
+              {EntrifyConfigurator(this.props.state).vcss}
+            </code>
+          </pre>
+          </div>
+        : '' }
         <strong>package.json</strong>
         <pre className="prism">
           <code className="prism language-json">

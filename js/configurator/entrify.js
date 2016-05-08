@@ -8,7 +8,10 @@ const nodeApp = `
 `
 
 export default function EntrifyConfigurator(state) {
-  let entries = { app : null, idx : VendoredJS(state), vcss: VendoredCSS(state) , css : ''}
+  let entries = { app : null,
+    idx : VendoredJS(state),
+    vcss: state.css.enabled === true ? VendoredCSS(state) : null ,
+    css : ''}
 
   if (state.config.template === 'node') {
     entries.app = nodeApp
