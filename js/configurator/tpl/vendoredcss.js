@@ -32,8 +32,8 @@ export default function VendoredCSS(state) {
   }
 
   if (state.css.transpiller.less === true) {
-    return out
+    return out.replace(/^\n/,'')
   }
 
-  return out.replace(/\;/gi, '')
+  return out.replace(/\;/gi, '').replace(/^\n/,'')
 }
