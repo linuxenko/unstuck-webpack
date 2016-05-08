@@ -4,7 +4,12 @@ export default function(state = {}, action) {
 
   if (action.type === 'RESET') {
     let init  = Object.assign({}, initialState.config)
+    init.html = Object.assign({}, initialState.config.html)
+    init.chunks = Object.assign({}, initialState.config.chunks)
+    init.extract = Object.assign({}, initialState.config.extract)
+    init.assets = Object.assign({}, initialState.config.assets)
     init.vendors = []
+
     return init
   }
 

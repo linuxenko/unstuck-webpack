@@ -37,6 +37,10 @@ export default function VendoredJS(state) {
     out += '\nimport \'foundation-sites/dist/foundation.js\''
   }
 
+  if (state.config.html.enabled === true) {
+    out += '\nimport \'./index.html\''
+  }
+
   out += `\nimport \'./${state.config.jsdir}/index.js\'`
 
   return out.replace(/^\n/,'')

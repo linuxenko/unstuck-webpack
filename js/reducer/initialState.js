@@ -1,9 +1,9 @@
 export default {
   html: {
-    enabled : false,
+    enabled : true,
     templates : {
       html : {
-        enabled : false,
+        enabled : true,
         target : '/'
       },
       jade : {
@@ -38,6 +38,7 @@ export default {
     cssdir : 'css',
     chunks : { enabled : true },
     extract : { enabled : true },
+    html  : { enabled : true },
     assets : {enabled : true, dir : 'assets'},
     vendors : []
   }

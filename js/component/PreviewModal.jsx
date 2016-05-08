@@ -4,7 +4,8 @@ import {connect} from 'react-redux'
 import Prism from 'prism/prism'
 import $ from 'jquery'
 
-import {NpmConfigurator, WebpackConfigurator, EntrifyConfigurator} from 'configurator'
+import {NpmConfigurator, WebpackConfigurator,
+   EntrifyConfigurator, HtmlifyConfigurator} from 'configurator'
 import {TS} from 'configurator/util'
 
 class PreviewModal extends Component {
@@ -30,6 +31,16 @@ class PreviewModal extends Component {
           <pre className="prism">
             <code className="prism language-javascript">
               {EntrifyConfigurator(this.props.state).vcss}
+            </code>
+          </pre>
+          </div>
+        : '' }
+        {this.props.state.config.html.enabled === true ?
+          <div>
+          <strong>index.html</strong>
+          <pre className="prism">
+            <code className="prism language-json">
+              {HtmlifyConfigurator(this.props.state)}
             </code>
           </pre>
           </div>

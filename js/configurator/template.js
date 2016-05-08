@@ -7,6 +7,7 @@ export default function TemplateConfigurator(dispatch, template) {
   if (template === 'node') {
     dispatch(Actions.TOGGLE_JS(true))
     dispatch(Actions.JS_SELECT_TRANSPILLER('babel', true))
+    dispatch(Actions.CONFIG_TOGGLE_PLUGIN('html', false))
     dispatch(Actions.CONFIG_TOGGLE_PLUGIN('chunks', false))
     dispatch(Actions.CONFIG_TOGGLE_PLUGIN('extract', false))
     dispatch(Actions.CONFIG_TOGGLE_PLUGIN('assets', false))

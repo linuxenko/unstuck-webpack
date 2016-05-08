@@ -113,6 +113,14 @@ class IndexContainer extends Component {
                 </Col>
 
                 <Col s={12} className="mb-10">
+                <Input name='html-init' type='checkbox'
+                  label='Initialize with index.html'
+                  checked={ this.props.state.config.html.enabled ? 'on' : ''}
+                  onChange={this.togglePlugin.bind(this, 'html')}
+                   />
+                </Col>
+
+                <Col s={12} className="mb-10">
                 <Input name='chunks-plugin' type='checkbox'
                   label='Chunks plugin settings'
                   checked={ this.props.state.config.chunks.enabled ? 'on' : ''}
