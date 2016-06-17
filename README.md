@@ -22,3 +22,8 @@
 
 [Configure](http://linuxenko.github.io/unstuck-webpack) and save project files (.zip).
 Extract them and run `npm install`.
+
+### TODO
+
+ - [ ] Versioning support.
+ - [ ] Notification about linter configuration
