@@ -9,6 +9,9 @@ import store from 'reducer/index'
 
 import {BlobifyConfigurator} from 'configurator'
 
+import PackageJSON from 'json!../../package.json'
+
+
 class Application extends Component {
   zipConfig() {
     BlobifyConfigurator(this.props.state)
@@ -25,7 +28,7 @@ class Application extends Component {
             </Col>
             <Button floating fab="horizontal" faicon="fa fa-bars" className="purple darken-1 waves-effect waves-light" large>
               <Button floating faicon="fa fa-github"
-              node="a" href="https://github.com/linuxenko/unstuck-webpack" className="black waves-effect waves-light"/>
+              node="a" href={PackageJSON.homepage} className="black waves-effect waves-light"/>
               <Button floating faicon="fa fa-floppy-o" onClick={this.zipConfig.bind(this)}
               className="pink darken-3 waves-effect waves-light"/>
               <Modal header="Preview Settings"
@@ -35,6 +38,7 @@ class Application extends Component {
             </Button>
           </Row>
         </div>
+        <a href={PackageJSON.homepage} className="uw_application--version">v{PackageJSON.version}</a>
       </div>
     )
   }

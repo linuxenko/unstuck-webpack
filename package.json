@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/linuxenko/unstuck-webpack/issues"
   },
-  "homepage": "https://github.com/linuxenko/unstuck-webpack#readme",
+  "homepage": "https://github.com/linuxenko/unstuck-webpack",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel": "^6.5.2",
@@ -31,6 +31,7 @@
     "file-loader": "^0.8.5",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.3",
+    "json-loader": "^0.5.4",
     "jszip": "^3.0.0",
     "materialize-css": "^0.97.6",
     "node-sass": "^3.4.2",
