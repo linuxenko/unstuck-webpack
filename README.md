@@ -1,7 +1,5 @@
 # Unstuck-Webpack ([Online](http://linuxenko.github.io/unstuck-webpack))
 
-[![Donate](https://img.shields.io/badge/donate-3$-green.svg?style=flat-square)](https://www.linuxenko.pro/donate.html#?amount=3)
-
 [![](https://raw.githubusercontent.com/linuxenko/unstuck-webpack/master/media/screen.png)](http://linuxenko.github.io/unstuck-webpack)
 
 
